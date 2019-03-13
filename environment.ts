@@ -8,4 +8,4 @@ export const environment = {
     storageBucket: 'oshop-e41c3.appspot.com',
     messagingSenderId: '60240058580'
   }
-};
+};s
