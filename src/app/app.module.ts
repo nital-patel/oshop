@@ -10,8 +10,6 @@ import {RouterModule} from '@angular/router';
 import {AngularFireModule} from 'angularfire2';
 import { ShoppingCartComponent } from './shopping-cart/shopping-cart.component';
 import { ProductsComponent } from './products/products.component';
-import { CheckOutComponent } from './check-out/check-out.component';
-import { OrderSuccessComponent } from './order-success/order-success.component';
 
 @NgModule({
   declarations: [
@@ -21,8 +19,6 @@ import { OrderSuccessComponent } from './order-success/order-success.component';
     BsNavbarComponent,
     ShoppingCartComponent,
     ProductsComponent,
-    CheckOutComponent,
-    OrderSuccessComponent,
   ],
   imports: [
     BrowserModule,
@@ -33,10 +29,6 @@ import { OrderSuccessComponent } from './order-success/order-success.component';
       { path: '', component: HomeComponent },
       {path: 'shopping-cart', component: ShoppingCartComponent},
       {path: 'products', component: ProductsComponent},
-      {path: 'check-out', component: CheckOutComponent},
-      {path: 'order-success', component: OrderSuccessComponent},
-      {path: 'order-success', component: OrderSuccessComponent},
-      {path: 'order-success', component: OrderSuccessComponent}
     ])
   ],
   providers: [],
