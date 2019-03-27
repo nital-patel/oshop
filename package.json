@@ -22,9 +22,12 @@
     "@ng-bootstrap/ng-bootstrap": "^4.1.0",
     "angularfire2": "^4.0.0-rc.1",
     "bootstrap": "^4.3.1",
+    "buffer": "^5.2.1",
     "core-js": "^2.5.4",
     "firebase": "^4.2.0",
-    "rxjs": "~6.3.3",
+    "global": "^4.3.2",
+    "rxjs": "^6.3.3",
+    "rxjs-compat": "^6.4.0",
     "tslib": "^1.9.0",
     "zone.js": "~0.8.26"
   },
@@ -48,5 +51,17 @@
     "ts-node": "~7.0.0",
     "tslint": "~5.11.0",
     "typescript": "~3.2.2"
-  }
+  },
+  "description": "This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 7.3.1.",
+  "main": "index.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/nital-patel/oshop.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/nital-patel/oshop/issues"
+  },
+  "homepage": "https://github.com/nital-patel/oshop#readme"
 }
