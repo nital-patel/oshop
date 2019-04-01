@@ -2,6 +2,7 @@ import { Injectable } from '@angular/core';
 import {CanActivate, Router, RouterStateSnapshot} from '@angular/router';
 import {AuthService} from './auth.service';
 import 'rxjs-compat/add/operator/map';
+import {AuthGuardService} from './auth-guard.service.ts';
 
 @Injectable({
   providedIn: 'root'
