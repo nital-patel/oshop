@@ -17,6 +17,7 @@ import {CheckOutComponent} from './check-out/check-out.component';
 import {OrderSuccessComponent} from './order-success/order-success.component';
 import {AngularFireDatabaseModule} from 'angularfire2/database';
 import {AngularFireAuthModule} from 'angularfire2/auth';
+import {AuthService} from './auth.service';
 
 @NgModule({
   declarations: [
@@ -50,7 +51,7 @@ import {AngularFireAuthModule} from 'angularfire2/auth';
       {path: 'admin/orders', component: AdminOrdersComponent}
     ])
   ],
-  providers: [],
+  providers: [AuthService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
