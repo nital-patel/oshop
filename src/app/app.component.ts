@@ -12,9 +12,9 @@ export class AppComponent {
     auth.user$.subscribe(user => {
       if (user) {
         return;
+        const returnUrl = localStorage.getItem('returnUrl');
+        router.navigateByUrl(returnUrl);
       }
-      const returnUrl = localStorage.getItem('returnUrl');
-      router.navigateByUrl(returnUrl);
     });
   }
 
