@@ -40,9 +40,9 @@ import {UserService} from './user.service';
   imports: [
     BrowserModule,
     AppRoutingModule,
+    AngularFireModule.initializeApp(environment.firebase),
     AngularFireDatabaseModule,
     AngularFireAuthModule,
-    AngularFireModule.initializeApp(environment.firebase),
     NgbModule,
     RouterModule.forRoot([
       {path: '', component: HomeComponent },

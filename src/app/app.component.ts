@@ -14,6 +14,7 @@ export class AppComponent {
               router: Router) {
     auth.user$.subscribe(user => {
       if (user) {
+        console.log(user);
         userService.save(user);
         const returnUrl = localStorage.getItem('returnUrl');
         router.navigateByUrl(returnUrl);
