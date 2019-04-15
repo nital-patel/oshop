@@ -23,6 +23,8 @@ import { MyOrdersComponent } from './my-orders/my-orders.component';
 import {UserService} from './user.service';
 import {AdminAuthGuard} from './admin-auth-guard.service';
 import { ProductFormComponent } from './admin/product-form/product-form.component';
+import {CategoryService} from './category.service';
+import {FormsModule} from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -38,7 +40,7 @@ import { ProductFormComponent } from './admin/product-form/product-form.componen
     AdminOrdersComponent,
     LoginComponent,
     MyOrdersComponent,
-    ProductFormComponent,
+    ProductFormComponent
   ],
   imports: [
     BrowserModule,
@@ -46,24 +48,27 @@ import { ProductFormComponent } from './admin/product-form/product-form.componen
     AngularFireModule.initializeApp(environment.firebase),
     AngularFireDatabaseModule,
     AngularFireAuthModule,
+    FormsModule,
     NgbModule,
     RouterModule.forRoot([
-      {path: '', component: HomeComponent },
+      {path: '', component: HomeComponent},
       {path: 'products', component: ProductsComponent},
       {path: 'shopping-cart', component: ShoppingCartComponent},
       {path: 'login', component: LoginComponent},
-      {path: 'check-out', component: CheckOutComponent, canActivate: [AuthGuard] },
-      {path: 'order-success', component: OrderSuccessComponent, canActivate: [AuthGuard] },
+      {path: 'check-out', component: CheckOutComponent, canActivate: [AuthGuard]},
+      {path: 'order-success', component: OrderSuccessComponent, canActivate: [AuthGuard]},
       {path: 'my/orders', component: MyOrdersComponent},
       {path: 'admin/products', component: AdminProductsComponent, canActivate: [AuthGuard, AdminAuthGuard]},
-      {path: 'admin/products/new', component: ProductFormComponent, canActivate: [AuthGuard, AdminAuthGuard] },
+      {path: 'admin/products/new', component: ProductFormComponent, canActivate: [AuthGuard, AdminAuthGuard]},
       {path: 'admin/orders', component: AdminOrdersComponent, canActivate: [AuthGuard, AdminAuthGuard]}
-    ])
+    ]),
+    FormsModule
   ],
   providers: [AuthService,
               AuthGuard,
               UserService,
-              AdminAuthGuard],
+              AdminAuthGuard,
+              CategoryService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
